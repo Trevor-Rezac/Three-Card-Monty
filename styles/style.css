@@ -55,12 +55,27 @@ body, html {
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     background-color: var(--falu-red);
     color: var(--burlywood);
     text-shadow: 2px 2px var(--rich-black-fogra-39);
     height: var(--header-height);
     box-shadow: var(--shadow);
+}
+
+header a {
+    margin: 10px;
+}
+a {
+    color: var(--burlywood);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-shadow: 2px 2px var(--rich-black-fogra-39);
 }
 
 footer {

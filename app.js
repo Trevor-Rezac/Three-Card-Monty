@@ -25,9 +25,19 @@ const cardArr = [
     card3
 ];
 
+const correctAce = [
+    'AOS',
+    'AOC',
+    'AOD',
+    'AOH',
+];
+
+// console.log(correctAce);
+
 const wrongCardArr = [
-    joker1,
-    joker2
+    1,
+    2, 
+    3
 ];
 
 // console.log(wrongCardArr[0]);
@@ -65,11 +75,13 @@ function getRandomItem(arr) {
 function handleGuess(userGuess, correctCard) {
     resetCards();
     attempts++;
+    const correctAceID = getRandomItem(correctAce);
+    const wrongCardID = getRandomItem(wrongCardArr);
     if (userGuess === correctCard) {
-        correctCard.src = './assets/requiemAOS.jpeg';
+        correctCard.src = `./assets/requiem${correctAceID}.jpeg`;
         wins++;
     } else {
-        userGuess.src = './assets/requiemJoker1.jpeg';
+        userGuess.src = `./assets/requiemJoker${wrongCardID}.jpeg`;
     }
     updateWinsLossAtt();
     disableBtns();
@@ -104,3 +116,4 @@ function enableBtns() {
     middleCardBtn.disabled = false;
     rightCardBtn.disabled = false;
 }
+
