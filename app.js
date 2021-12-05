@@ -2,13 +2,13 @@
 const card1 = document.querySelector('.back1');
 const card2 = document.querySelector('.back2');
 const card3 = document.querySelector('.back3');
-const joker1 = document.querySelector('#joker-1');
-const joker2 = document.querySelector('#joker-2');
-console.log(joker1);
+const joker1 = document.getElementById('joker-1');
+const joker2 = document.getElementById('joker-2');
+// console.log(joker1);
 
-const leftCardBtn = document.querySelector('.left-card-btn');
-const middleCardBtn = document.querySelector('.middle-card-btn');
-const rightCardBtn = document.querySelector('.right-card-btn');
+const leftCardBtn = document.getElementById('left-card-btn');
+const middleCardBtn = document.getElementById('middle-card-btn');
+const rightCardBtn = document.getElementById('right-card-btn');
 const shuffleBtn = document.querySelector('#shuffle-btn');
 const resetStatsBtn = document.querySelector('#reset-stats-btn');
 
@@ -29,7 +29,9 @@ const wrongCardArr = [
     joker1,
     joker2
 ];
+
 // console.log(wrongCardArr[0]);
+// console.log(getRandomItem(wrongCardArr));
 
 leftCardBtn.addEventListener('click', () => {
     const correctCard = getRandomItem(cardArr);
@@ -45,7 +47,6 @@ rightCardBtn.addEventListener('click', () => {
     const correctCard = getRandomItem(cardArr);
     handleGuess(card3, correctCard);
 });
-
 
 shuffleBtn.addEventListener('click', () => {
     resetCards();

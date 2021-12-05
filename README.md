@@ -1,25 +1,20 @@
-## The Golden Rule: 
+## ADDITIONAL GOALS 
+1. use the wrongCardArr to randomize the joker displayed on wrong guess
+  - why? will return different jokers when 
+  - how?? I can seem to grab the random image from the array but cannot get the image to populate on the wrong guess
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+2. make the images clickable to replace the buttons
+  - Why? gives user the feeling of selecting the actual card vs clicking a button
+  - How? 
+    * onclick function? tried but not entirely understanding
+    * tried adding an anchor and link option but nothing happened (no link destination)
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+3. add animation to card images
+  - Why? give the cards the look of being shuffled between each turn 
+  - How? 
+    * tried adding a css class with keyframes animation but image remained static
+    * other options???
 
-## Making a plan
 
-1) **Make a drawing of your app. Simple "wireframes"**
-1) **Once you have a drawing, name the HTML elements you'll need to realize your vision**
-1) **For each HTML element ask: Why do I need this?** 
-1) **Once we know _why_ we need each element, think about how to implement the "Why" as a "How"**
-1) **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change?**
-1) **Think about how to validate each of your features according to a Definition of Done**
-1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
-Additional considerations:
-- Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
-  - What needs to live in a persistence layer?
-- Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+
