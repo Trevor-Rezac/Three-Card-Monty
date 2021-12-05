@@ -2,8 +2,6 @@
 const card1 = document.querySelector('.back1');
 const card2 = document.querySelector('.back2');
 const card3 = document.querySelector('.back3');
-const joker1 = document.getElementById('joker-1');
-const joker2 = document.getElementById('joker-2');
 // console.log(joker1);
 
 const leftCardBtn = document.getElementById('left-card-btn');
@@ -31,7 +29,6 @@ const correctAce = [
     'AOD',
     'AOH',
 ];
-
 // console.log(correctAce);
 
 const wrongCardArr = [
@@ -39,7 +36,6 @@ const wrongCardArr = [
     2, 
     3
 ];
-
 // console.log(wrongCardArr[0]);
 // console.log(getRandomItem(wrongCardArr));
 
