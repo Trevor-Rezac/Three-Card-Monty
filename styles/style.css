@@ -68,6 +68,7 @@ header {
 header a {
     margin: 10px;
 }
+
 a {
     color: var(--burlywood);
     text-shadow: none;
@@ -109,6 +110,18 @@ img {
     flex-direction: row;
     margin: auto;
     margin-top: 15px;
+    cursor: pointer;
+}
+
+.card {
+    transition: 1 ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: rotate(5deg);
+    box-shadow: 2px 2px var(--falu-red), 2px 2px 2px 2px var(--rich-black-fogra-39);
+    
 }
 
 .joker-container {
@@ -167,3 +180,8 @@ button:hover {
         left: 0px;
     }
 } */
+
+.noPointer {
+    pointer-events: none;
+}
+

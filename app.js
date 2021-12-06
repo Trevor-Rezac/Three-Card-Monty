@@ -4,9 +4,9 @@ const card2 = document.querySelector('.back2');
 const card3 = document.querySelector('.back3');
 // console.log(joker1);
 
-const leftCardBtn = document.getElementById('left-card-btn');
-const middleCardBtn = document.getElementById('middle-card-btn');
-const rightCardBtn = document.getElementById('right-card-btn');
+const leftCardBtn = document.getElementById('card-1-btn');
+const middleCardBtn = document.getElementById('card-2-btn');
+const rightCardBtn = document.getElementById('card-3-btn');
 const shuffleBtn = document.querySelector('#shuffle-btn');
 const resetStatsBtn = document.querySelector('#reset-stats-btn');
 
@@ -56,7 +56,8 @@ rightCardBtn.addEventListener('click', () => {
 
 shuffleBtn.addEventListener('click', () => {
     resetCards();
-    enableBtns();
+    // enableBtns();
+    enablePointer();
 });
 
 resetStatsBtn.addEventListener('click', () => {
@@ -80,7 +81,8 @@ function handleGuess(userGuess, correctCard) {
         userGuess.src = `./assets/requiemJoker${wrongCardID}.jpeg`;
     }
     updateWinsLossAtt();
-    disableBtns();
+    // disableBtns();
+    disablePointer();
 }
 
 function resetCards() {
@@ -101,15 +103,27 @@ function resetStats() {
     updateWinsLossAtt();
 }
 
-function disableBtns() {
-    leftCardBtn.disabled = true;
-    middleCardBtn.disabled = true;
-    rightCardBtn.disabled = true;
+function disablePointer() {
+    leftCardBtn.classList.add('noPointer');
+    middleCardBtn.classList.add('noPointer');
+    rightCardBtn.classList.add('noPointer');
 }
 
-function enableBtns() {
-    leftCardBtn.disabled = false;
-    middleCardBtn.disabled = false;
-    rightCardBtn.disabled = false;
+function enablePointer() {
+    leftCardBtn.classList.remove('noPointer');
+    middleCardBtn.classList.remove('noPointer');
+    rightCardBtn.classList.remove('noPointer');
 }
+
+// function disableBtns() {
+//     leftCardBtn.disabled = true;
+//     middleCardBtn.disabled = true;
+//     rightCardBtn.disabled = true;
+// }
+
+// function enableBtns() {
+//     leftCardBtn.disabled = false;
+//     middleCardBtn.disabled = false;
+//     rightCardBtn.disabled = false;
+// }
 
